@@ -56,7 +56,7 @@ class RepititionWindow(QMainWindow):
         self.answer_input.returnPressed.connect(self.check_answer)
         
     def load_categories(self):
-        categories = self.db.get_categories_with_stats(self.user_id)  # ← ДОБАВЬ ЭТУ СТРОКУ
+        categories = self.db.get_categories_with_stats(self.user_id) 
         self.category_combo.clear()
         
         for category, count in categories:
@@ -108,4 +108,5 @@ class RepititionWindow(QMainWindow):
             self.answer_input.setFocus()
             
     def next_word(self):
+
         self.load_new_word()
